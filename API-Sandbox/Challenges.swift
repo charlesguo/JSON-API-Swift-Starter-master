@@ -103,8 +103,9 @@ internal func exerciseThree() {
      */
     var allMovies: [Movie] = []
     
-    
-    
+    for i in allMoviesData {
+        allMovies.append(Movie(json: i))
+    }
     
     /*
      
@@ -113,9 +114,13 @@ internal func exerciseThree() {
      contains the `String` "Disney". Iterate over all the values in `allMovies` to check!
      
      */
-//    print("The following movies are Disney movies...")
+    print("The following movies are Disney movies...")
     
-    
+    for i in allMovies {
+        if (i.rightsOwner.rangeOfString("Disney") != nil) {
+            print(i.name)
+        }
+    }
     
     
     /*
@@ -124,8 +129,13 @@ internal func exerciseThree() {
      movie that costs less than $15. Iterate over all the values in `allMovies` to check!
      
      */
-//    print("The following movies are cost less than $15...")
+    print("The following movies are cost less than $15...")
     
+    for i in allMovies {
+        if (i.price < 15) {
+            print(i.name)
+        }
+    }
     
     
     
@@ -135,9 +145,13 @@ internal func exerciseThree() {
      each movie released in 2016. Iterate over all the values in `allMovies` to check!
      
      */
-//    print("The following movies were released in 2016...")
+    print("The following movies were released in 2016...")
     
-    
+    for i in allMovies {
+        if (i.releaseDate.rangeOfString("2016") != nil) {
+            print(i.name)
+        }
+    }
     
     
 }
