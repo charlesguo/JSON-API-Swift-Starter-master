@@ -133,7 +133,7 @@ internal func exerciseThree() {
     
     for i in allMovies {
         if (i.price < 15) {
-            print(i.name)
+            print("\(i.name) costs \(i.price)")
         }
     }
     
@@ -149,7 +149,7 @@ internal func exerciseThree() {
     
     for i in allMovies {
         if (i.releaseDate.rangeOfString("2016") != nil) {
-            print(i.name)
+            print("\(i.name) was released on \(i.releaseDate)")
         }
     }
     
