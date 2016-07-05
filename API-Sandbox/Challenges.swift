@@ -107,6 +107,13 @@ internal func exerciseThree() {
         allMovies.append(Movie(json: i))
     }
     
+//    for movie in allMoviesData {
+//        allMovies.append(Movie(json: movie))
+//    }
+    
+//    mapping is the same as the for loop above
+//    let allMovies: [Movie] = allMoviesData.map { Movie(json: $0) }
+    
     /*
      
      Uncomment the below print statement and then print out the titles of the two Disney
@@ -121,7 +128,20 @@ internal func exerciseThree() {
             print(i.name)
         }
     }
-    
+
+//    $0 is each element in the structure that you are filtering against
+//    let array1 = [1,2,3]
+//    let array2 = array1.filter {
+//        $0 < 3
+//    }
+//    
+//    
+//    let disneyMovies = allMovies.filter {
+//        $0.rightsOwner.containingString("Disney")
+//    }
+//    for movie in disneyMovies{
+//        print("\(movie.name)")
+//    }
     
     /*
      
@@ -137,6 +157,9 @@ internal func exerciseThree() {
         }
     }
     
+//    let cheapMovies = allMovies.filter {
+//        $0.price < 15.00
+//    }
     
     
     /*
@@ -153,5 +176,6 @@ internal func exerciseThree() {
         }
     }
     
+//    if movie.releaseDate.containsString("2016")
     
 }
